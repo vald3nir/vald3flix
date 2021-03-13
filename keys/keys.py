@@ -1,3 +1,8 @@
-
+# DATA_BASE
 DB_USER_NAME = "dev"
 DB_USER_PASSWORD = "njOcs9iCSBCO8Gro"
+
+# APIS
+
+# OMBd KEY
+OMBD_KEY = "76c8a8a0"
