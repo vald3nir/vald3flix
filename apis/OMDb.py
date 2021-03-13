@@ -14,9 +14,19 @@ class OMDb:
 
     def search_media(self, media_id):
         r = requests.get(f"{self.BASE_URL}?i={media_id}&apikey={OMBD_KEY}")
-        if r.status_code == 200:
-            print(r.json())
+        return r.json()
+
+    def search_medias(self, media_ids):
+        medias = []
+        index = 1
+        size = len(media_ids)
+        for media_id in media_ids:
+            print(f"id {index}/{size}: {media_id}")
+            medias.append(self.search_media(media_id=media_id))
+            index += 1
+        return medias
 
 # TEST
 # if __name__ == '__main__':
-#     OMDb().search_media("tt1179056")
+#     # print(OMDb().search_media("tt1179056"))
+#     print(OMDb().search_medias(["tt1014763", "tt1259521"]))

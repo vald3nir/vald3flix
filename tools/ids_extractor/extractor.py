@@ -12,9 +12,7 @@ for root, dirs, files in os.walk(movies_folder):
         ids.add("tt" + s[s.find('[tt') + len('[tt'):s.rfind(']')])
 
 with open('ids.txt', 'w') as file:
-    file.write("[")
     for key in ids:
-        file.write(f"'{key}',")
-    file.write("]")
+        file.write(f"{key}\n")
 
 print(f"{len(ids)} Movies")
