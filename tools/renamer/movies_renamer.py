@@ -5,10 +5,11 @@ import xml.etree.ElementTree as ET
 
 # ------------------------------------------------------------------------------------
 
-movies_folder = '/media/vald3nir/Arquivos/Vald3flix/Filmes' 
+movies_folder = '/media/vald3nir/Arquivos/Vald3flix/Filmes'
 
 flag_rename = True
 flag_rename = False
+
 
 # ------------------------------------------------------------------------------------
 
@@ -44,7 +45,7 @@ def generate_movie_name(file_nfo):
 
             if tag == 'imdbid':
                 movie_name = movie_name.replace('{imdbid}', '{0}'.format(element[n].text))
-        
+
         return os.path.join(movies_folder, movie_name)
 
 
@@ -63,6 +64,7 @@ def rename_movies():
             for extension in [".mp4", ".avi", ".mkv", ".srt", ".nfo"]:
                 if os.path.exists(old_movie + extension):
                     rename_file(old_movie + extension, new_movie + extension)
+
 
 # ------------------------------------------------------------------------------------
 

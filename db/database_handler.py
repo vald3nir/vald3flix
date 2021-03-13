@@ -20,7 +20,7 @@ class DatabaseHandler:
     def __init__(self) -> None:
         super().__init__()
         client = pymongo.MongoClient(
-            f"mongodb+srv://{USER}:{PASSWORD}@realmcluster.ikdg6.mongodb.net/{DATABASE}?retryWrites=true&w=majority")
+            f"mongodb+srv://{USER}:{PASSWORD}@{DB_HOST}/{DATABASE}?retryWrites=true&w=majority")
         self.db = client[DATABASE]
 
     def find_one(self, collection, query):
