@@ -1,0 +1,3 @@
+
+DB_USER_NAME = "dev"
+DB_USER_PASSWORD = "njOcs9iCSBCO8Gro"

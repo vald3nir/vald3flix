@@ -3,14 +3,16 @@
 
 import pymongo
 
+from keys.keys import *
+
 # collections:
 MOVIES = "movies"
 SERIES = "series"
 
 # DB CONFIG
 DATABASE = "vald3flix"
-USER = "dev"
-PASSWORD = "njOcs9iCSBCO8Gro"
+USER = DB_USER_NAME
+PASSWORD = DB_USER_PASSWORD
 
 
 class DatabaseHandler:
